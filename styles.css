@@ -1,0 +1,226 @@
+/* Add your custom styles here */
+/* For example: */
+body {
+    font-family: Arial, sans-serif;
+
+    
+  }
+  
+  header {
+    margin-bottom: 20px;
+    background-color: #000000;
+    color: white;
+  }
+
+/* NAVBAR START */
+  .transparent-navbar {
+    background-color: transparent !important;
+    transition: background-color 0.3s ease-in-out;
+  }
+  
+  .navbar-scrolled {
+    background-color: black !important;
+  }
+  
+  .navbar .navbar-nav .nav-item .nav-link {
+    padding: 8px 15px;
+    border-radius: 5px;
+    margin: 0 5px;
+    color: white; /* Default color */
+  }
+  
+    .navbar .navbar-nav .nav-item .nav-link:hover {
+      color: #ff8c00; 
+    }
+  /* NAVBAR END */
+  
+
+  /* PICTURE CAROUSEL START */
+    .carousel-item img {
+      height: 700px; /* Set the height of carousel images */
+      object-fit: cover; /* Ensure images cover the entire carousel area */
+      margin-top: 0;
+    }
+  
+  .jumbotron {
+    background-size: cover;
+    color: rgb(0, 0, 0);
+    padding: 100px 0;
+  }
+
+  /* PICTURE CAROUSEL END */
+
+  /* BARBERS PICTURES START */
+  .employee {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .employee img {
+    width: 100%;
+    border-radius: 0%;
+    height: 60vh;
+    
+  }
+  
+  .employee h3 {
+    margin-top: 10px;
+  }
+  
+  .text-overlay h2 {
+    margin-bottom: 10px;
+  }
+
+
+
+  .zoom-container {
+    position: relative;
+    overflow:hidden;
+  }
+  
+  .img-zoomable,
+  .text-zoomable {
+    transition: transform 2s ease-in-out;
+  }
+  
+  .zoom-container:hover .img-zoomable,
+  .zoom-container:hover .text-zoomable {
+    transform: scale(1.2);
+  }
+
+  .slick-slider {
+    width: 100%; 
+    margin: 0 auto;
+  }
+  
+  /*text pic*/
+  .shaped-background {
+    display:inline-block;
+    background-color: #000000;
+    color: rgb(255, 111, 0);
+    padding: 10px 82px;
+    border-radius: 5px;
+  }
+/* BARBERS PICTURES END*/
+
+  #services {
+    padding: 50px 0;
+  }
+  
+  .card {
+    margin-bottom: 20px;
+  }
+  
+
+  /* GO TO UP START */
+.btn-scroll-top {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  display: none;
+  background-color: #ff9500;
+  color: #000000;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  text-align: center;
+  font-size: 20px;
+  line-height: 40px;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.btn-scroll-top i {
+  transform: rotate(270deg);
+}
+
+.btn-scroll-top.show {
+  display: block;
+}
+
+.btn-scroll-top:hover {
+  opacity: 0.7;
+}
+/* GO TO UP END */
+
+
+/*services*/
+.employee-card {
+  margin-bottom: 30px;
+  padding: 10px;
+  color: #000000;
+  background-color: #ffffff;
+  border: 2px solid #292929; /* Set the border thickness and color */
+
+}
+
+.card img {
+  height: 300px; /* Set the desired height for employee images */
+  object-fit: cover;
+}
+
+
+/*end services*/
+ 
+
+  .footer {
+    background-color: #000000;
+    text-align: left; /* Align content within the footer */
+    margin: 0%;
+    padding: 0;
+  }
+
+  .indented {
+    margin-left: 20px; /* Adjust the indentation size as needed */
+  }
+
+  content{
+    line-height: 0%; /* Adjust line height as needed */
+  }
+
+  .custom-text {
+    color: orange; /* Replace 'blue' with your desired color */
+  }
+  
+  .social-icon {
+    color: orange; /* Set the color to orange */
+    font-size: 24px; /* Adjust the icon size */
+    margin-right: 10px; /* Add space between icons */
+  }
+
+  /* Gallery Starts Here */
+/* Basic styles */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between; /* Distribute items evenly between columns */
+}
+
+.navigation-bar {
+  width: 94.4pc;
+  height: 100px;
+  background-color: black; /* Just for visualization */
+}
+
+.gallery-item {
+  width: calc(50% - 3px); /* Two columns with a small gap in between */
+  margin-bottom: 5px; /* Add some space between items */
+}
+
+.gallery-item img {
+  max-width: 100%;
+  display: flex;
+  transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.gallery-item:hover img {
+  transform: scale(1.1); /* Zoom effect */
+  filter: brightness(1.2); /* Brighten effect */
+}
+
+         
