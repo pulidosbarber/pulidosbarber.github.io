@@ -2,7 +2,7 @@
 /* For example: */
 body {
     font-family: Arial, sans-serif;
-
+   
     
   }
   
@@ -10,16 +10,17 @@ body {
     margin-bottom: 20px;
     background-color: #000000;
     color: white;
+    
   }
 
 /* NAVBAR START */
   .transparent-navbar {
-    background-color: transparent !important;
+    background-color:#000000 !important;
     transition: background-color 0.3s ease-in-out;
   }
   
   .navbar-scrolled {
-    background-color: black !important;
+    background-color: rgba(0, 0, 0, 0.58) !important;
   }
   
   .navbar .navbar-nav .nav-item .nav-link {
@@ -32,16 +33,44 @@ body {
     .navbar .navbar-nav .nav-item .nav-link:hover {
       color: #ff8c00; 
     }
+
+    @media (max-width: 768px) {
+      .navbar-toggler {
+        background-color: orange; /* Change button background color */
+        border-color: orange; /* Change button border color */
+      }
+    }
+
+    /* Custom styles for mobile mode */
+   @media (max-width: 768px) {
+  /* Adjust logo size for mobile */
+  .img-fluid {
+    width: 250px; /* Set a smaller width for the logo on mobile */
+    height: auto; /* Let the height adjust automatically to maintain aspect ratio */
+  }
+}
+
+   
+
+  
+   
   /* NAVBAR END */
   
 
   /* PICTURE CAROUSEL START */
+  
     .carousel-item img {
-      height: 700px; /* Set the height of carousel images */
+      height: 600px; /* Set the height of carousel images */
       object-fit: cover; /* Ensure images cover the entire carousel area */
-      margin-top: 0;
+     
     }
   
+    @media (max-width: 768px) {
+      .carousel-item img {
+        height: 240px; /* Set a shorter height for carousel images on mobile */
+      }
+    }
+
   .jumbotron {
     background-size: cover;
     color: rgb(0, 0, 0);
@@ -191,21 +220,18 @@ body {
 /* Basic styles */
 body {
   font-family: Arial, sans-serif;
-  margin: 0;
+  margin-top: 50px;
   padding: 0;
+  
 }
 
 .gallery {
   display: flex;
-  flex-wrap: wrap;
+  flex-wrap:wrap;
   justify-content: space-between; /* Distribute items evenly between columns */
 }
 
-.navigation-bar {
-  width: 94.4pc;
-  height: 100px;
-  background-color: black; /* Just for visualization */
-}
+
 
 .gallery-item {
   width: calc(50% - 3px); /* Two columns with a small gap in between */
@@ -223,4 +249,5 @@ body {
   filter: brightness(1.2); /* Brighten effect */
 }
 
-         
+
+
