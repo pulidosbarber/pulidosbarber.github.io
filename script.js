@@ -9,16 +9,62 @@ $(window).scroll(function() {
 
 
   $(document).ready(function(){
-    $('.slick-slider').slick({
-      // Slick slider settings
-      slidesToShow: 3,
-      slidesToScroll: 1,
-      autoplay: true,
-      autoplaySpeed: 1000, // Adjust the speed as needed
-      dots: true // Display dots for navigation
-      // Add more settings as required
+    // Detect screen size
+    var windowWidth = $(window).width();
+    
+    // Initialize Slick slider with appropriate settings based on screen size
+    if (windowWidth >= 768) { // Desktop mode
+        $('.slick-slider').slick({
+            slidesToShow: 3,
+            slidesToScroll: 1,
+            autoplay: true,
+            autoplaySpeed: 1000,
+            dots: true
+            // Add more settings for desktop mode if needed
+        });
+    } else { // Mobile mode
+        $('.slick-slider').slick({
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            autoplay: true,
+            autoplaySpeed: 1000,
+            dots: true
+            // Add more settings for mobile mode if needed
+        });
+    }
+    
+    // Re-initialize Slick slider on window resize
+    $(window).resize(function() {
+        var windowWidth = $(window).width();
+        
+        // Destroy existing Slick slider instance
+        $('.slick-slider').slick('unslick');
+        
+        // Re-initialize Slick slider with appropriate settings based on screen size
+        if (windowWidth >= 768) { // Desktop mode
+            $('.slick-slider').slick({
+                slidesToShow: 3,
+                slidesToScroll: 1,
+                autoplay: true,
+                autoplaySpeed: 1000,
+                dots: true
+                // Add more settings for desktop mode if needed
+            });
+        } else { // Mobile mode
+            $('.slick-slider').slick({
+                slidesToShow: 1,
+                slidesToScroll: 1,
+                autoplay: true,
+                autoplaySpeed: 1000,
+                dots: true
+                // Add more settings for mobile mode if needed
+            });
+        }
     });
-  });
+});
+
+
+
   
   
   // Function to scroll to top smoothly
